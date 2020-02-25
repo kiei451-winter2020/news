@@ -1,0 +1,13 @@
+.body{
+    font-family: 'Cormorant Garamond', serif;
+    background-color: lightyellow;
+}
+
+.container {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.h1, h1 {
+    font-family: 'Satisfy', serif;
+    font-size: 1.8rem;
+}

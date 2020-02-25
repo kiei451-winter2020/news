@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Google Fonts -->
+   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cormorant+Garamond|Lobster|Lora|Satisfy&display=swap"
     rel="stylesheet">
 
@@ -19,26 +19,103 @@
     <!-- Your own CSS -->
     <link rel="stylesheet" href="styles.css">
 
-    <title>Insert Location</title>
+    <title>News</title>
   </head>
   <body>
 
     <div class="container mt-5">
-      <h1>Insert Location</h1>
+      <h1>News</h1>
+      Location = <%= @location %>
+      <div>
+      Latitude & Longitude = <%= @geocode_lat %>, <%= @geocode_long %>
+    </div>
+      </div>
+
+      <div>
+      "Today's Forecast:"
+<%= "In #{@location}, it is currently #{@current_temperature} degrees and #{@current_summary}." %>
+    </div>
+
+      <div>
+      "Five Day Forecast:"
+
+<%=
+"A high temperature of #{@forecast_daily[0]["temperatureHigh"]} and #{@forecast_daily[0]["summary"].downcase}"
+%>
+
+<%=
+"A high temperature of #{@forecast_daily[1]["temperatureHigh"]} and #{@forecast_daily[1]["summary"].downcase}"
+%>
+
+<%=
+"A high temperature of #{@forecast_daily[2]["temperatureHigh"]} and #{@forecast_daily[2]["summary"].downcase}"
+%>
+
+
+<%=
+"A high temperature of #{@forecast_daily[3]["temperatureHigh"]} and #{@forecast_daily[3]["summary"].downcase}"
+%>
+
+
+<%=
+"A high temperature of #{@forecast_daily[4]["temperatureHigh"]} and #{@forecast_daily[4]["summary"].downcase}"
+%>
+
     </div>
 
     <div class="container mt-5">
-        <h2>Geocoding</h2>
-         <form action="/news">
-            <label>Location:</label>
-            <input name="location">
-            <button type="submit" class="btn btn-success">Submit</button>
-         </form>
+        <a href="/" class="btn btn-success">"Reselect Location"</a>
     </div>
 
-    <div class="container mt-5">
-        <a href="/news" class="btn btn-success">"What's the Scoop?"</a>
-    </div>
+<div>
+Title 1: 
+<%=
+@news_title_1
+%>
+<a href=<%=
+@news_url_1
+%>>"Link to Article"</a>
+</div>
+
+<div>
+Title 2: 
+<%=
+@news_title_2
+%>
+<a href=<%=
+@news_url_2
+%>>"Link to Article"</a>
+</div>
+
+<div>
+Title 3: 
+<%=
+@news_title_3
+%>
+<a href=<%=
+@news_url_3
+%>>"Link to Article"</a>
+</div>
+
+<div>
+Title 4: 
+<%=
+@news_title_4
+%>
+<a href=<%=
+@news_url_4
+%>>"Link to Article"</a>
+</div>
+
+<div>
+Title 5: 
+<%=
+@news_title_5
+%>
+<a href=<%=
+@news_url_5
+%>>"Link to Article"</a>
+</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
