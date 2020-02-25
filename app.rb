@@ -34,18 +34,23 @@ get "/news" do
   news = HTTParty.get(url).parsed_response.to_hash
 
   @news_title_1 = news["articles"][0]["title"]
+  @news_description_1 = news["articles"][0]["description"]
   @news_url_1 = news["articles"][0]["url"]
   
   @news_title_2 = news["articles"][1]["title"]
+  @news_description_2 = news["articles"][1]["description"]
   @news_url_2 = news["articles"][1]["url"]
 
   @news_title_3 = news["articles"][2]["title"]
+  @news_description_3 = news["articles"][2]["description"]
   @news_url_3 = news["articles"][2]["url"]
 
   @news_title_4 = news["articles"][3]["title"]
+  @news_description_4 = news["articles"][3]["description"]
   @news_url_4 = news["articles"][3]["url"]
   
   @news_title_5 = news["articles"][4]["title"]
+  @news_description_5 = news["articles"][4]["description"]
   @news_url_5 = news["articles"][4]["url"]
 
   view "news"
