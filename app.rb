@@ -56,15 +56,3 @@ get "/news" do
   view "news"
 
 end
-
-# puts "In Chicago, it is currently #{current_temperature} degrees and #{current_summary}."
-# puts "----------"
-# puts "Extended Forecast"
-
-#First Day's Forecast
-# puts "A high temperature of #{forecast["daily"]["data"][0]["temperatureHigh"]} and #{forecast["daily"]["data"][0]["summary"].downcase}"
-
-# forecast_array = forecast["daily"]["data"]
-# for forecast_loop in forecast_array
-# puts "A high temperature of #{forecast_loop["temperatureHigh"]} and #{forecast_loop["summary"].downcase}"
-# end
